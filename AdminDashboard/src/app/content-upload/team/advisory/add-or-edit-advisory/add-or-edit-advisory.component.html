@@ -1,0 +1,70 @@
+<section class="mx-2 p-3 card bg-white rounded-0">
+    <div class="ms-3 d-flex justify-content-between align-items-center">
+        <h2 class="ps-3" *ngIf="datas">Edit Advisory Item</h2>
+        <h2 class="ps-3" *ngIf="!datas">Add Advisory Item</h2>
+    </div>
+    <form [formGroup]="addEditAdvisoryItemForm" (ngSubmit)="addeditAdvisoryItem()">
+        <!-- (ngSubmit)="onFormSubmit()" -->
+        <div class="row justify-content-center my-4">
+            <div class="">
+                <label for="image">Select Image:</label>
+                <input  type="file" (change)="this.onFilechange($event)" formControlName="imageFile" (change)="readUrl($event)">
+                <img [src]="url" width="100" height="100">
+            </div>
+            <div class="col-lg-6 row">
+                <mat-label class="col-12 pb-3 fs-4"> Name :</mat-label>
+                <mat-form-field appearance="outline"  class="col-8">
+                    <mat-label> Name</mat-label>
+                    <input matInput type="text" placeholder="Enter  name" formControlName="name">
+                </mat-form-field>
+            </div>
+    
+            <div class="col-lg-6 row">
+                <mat-label class="col-12 pb-3 fs-4">Designation :</mat-label>
+                <mat-form-field appearance="outline" class="col-8">
+                    <mat-label>Designation</mat-label>
+                    <input matInput type="text" placeholder="Enter Designation" formControlName="designation">
+                </mat-form-field>
+            </div>
+
+            <div class="col-lg-6 row">
+                <mat-label class="col-12 pb-3 fs-4">About :</mat-label>
+                <mat-form-field appearance="outline" class="col-8">
+                    <mat-label>About</mat-label>
+                    <textarea matInput type="text" placeholder="Enter About" formControlName="about"></textarea>
+                </mat-form-field>
+            </div>
+
+            <div class="col-lg-6 row">
+                <mat-label class="col-12 pb-3 fs-4">Link :</mat-label>
+                <mat-form-field appearance="outline" class="col-8">
+                    <mat-label>Link</mat-label>
+                    <input matInput type="text" placeholder="Enter Link" formControlName="link">
+                </mat-form-field>
+            </div>
+        </div>
+        <div mat-dialog-actions class="my-5">
+            <div class="col-lg-5 col-md-12">
+                <button mat-raised-button type="reset" class="" (click)="closeModal()">Cancel</button>
+            </div>
+            <div class="col-lg-5 col-md-12">
+                <!-- <button mat-raised-button color="primary" type="submit" class="float-lg-end" >
+                    {{data ? 'Update':'Save'}} Add Teacher </button>   -->
+                    <button mat-raised-button color="primary" type="submit" class="col-4 d-flex float-lg-end">{{datas ? 'Update':
+                        'Submit'}}</button>  
+            </div>
+        </div>
+    </form>
+    
+    <ng-template #successMsg>
+        <div mat-dialog-title>
+            <p *ngIf="success" style="opacity: 0.85; color: green;" class="align-items-center justify-content-center ">
+                {{appService.httpClientMsg}}</p>
+            <p *ngIf="err" style="opacity: 0.85; color: red;" class="align-items-center justify-content-center">
+                {{appService.httpClientMsg}}</p>
+        </div>
+    </ng-template>
+</section>
+
+
+

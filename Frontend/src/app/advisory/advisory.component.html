@@ -1,0 +1,17 @@
+<div class="founder" *ngIf="getAllAdvisor.length > 0">
+    <div class="container mx-auto py-5">
+        <h1 class="fw-bold">Advisory Board</h1>
+        <hr>
+        <div class="row mx-lg-5 py-lg-5" >
+            <div class="col-lg-6" *ngFor="let team of getAllAdvisor">
+                <div class=" mb-3">
+                    <img class="avatar-img rounded-circle border border-1" [src]="team.image" alt="avatar" style="width: 200px; height: 200px;">
+                </div>
+                <h1>{{team.name}}</h1>
+                <h5>{{team.designation}}</h5>
+                <p class="py-4">{{team.about}}</p>
+                <a [href]="team.link" target="_blank" style="color: rgb(148, 142, 142);"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+            </div>
+        </div>
+    </div>
+</div>

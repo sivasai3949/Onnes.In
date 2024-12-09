@@ -1,0 +1,12 @@
+.card img{
+    width: 320px;
+    height: 235px;
+}
+h1{
+    color: #1B75BC;
+}
+hr{
+    height: 3px;
+    color: #1B75BC;
+    width: 200px;
+}

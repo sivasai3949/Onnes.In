@@ -1,0 +1,106 @@
+<!-- Header-start -->
+<header class="navbar-light">
+    <nav class="container navbar navbar-expand-xl" >
+        <!-- Logo Start -->
+        <a class="navbar-brand" routerLink="home" >
+            <img class="light-mode-item navbar-brand-item" src="assets/images/logo.png" alt="logo">
+        </a>
+        <!-- Logo End -->
+
+        <!-- Responsive navbar toggler -->
+        <button class="navbar-toggler ms-auto me-3 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-animation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </button>
+        <!-- Main navbar START -->
+        <div class="navbar-collapse w-100 collapse" id="navbarCollapse">
+            <!-- Nav category menu START -->
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+
+            </ul>
+            <!-- Nav category menu END -->
+
+            <!-- Nav Main menu START -->
+            <ul class="navbar-nav navbar-nav-scroll me-auto p-3">
+                <!-- Nav item-->
+                <li class="nav-item d-none d-lg-block">
+                    <a class="nav-link "  routerLink="/home" fragment="">Home</a>
+                </li>
+                <li class="nav-item d-lg-none">
+                    <a class="nav-link " routerLink="/home" fragment="" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false">Home</a>
+                </li>
+                <li class="nav-item d-none d-lg-block">
+                    <a class="nav-link"  [routerLink]="'home'" fragment="about">About Us</a>
+                </li>
+                <li class="nav-item d-lg-none">
+                    <a class="nav-link" [routerLink]="'home'" fragment="about" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false">About Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle"  id="demoMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="cursor: pointer;">Team</a>
+                    <ul class="dropdown-menu"  aria-labelledby="demoMenu">
+                        <!-- Dropdown submenu -->
+                        <li class="dropdown-submenu dropend" *ngFor="let data of allnavItemList">
+                            <a class="dropdown-item d-none d-lg-block " *ngIf="data.navbarName === 'Team'" [routerLink]="'home'" [fragment]="data.routerLink" data-bs-toggle="dropdown" aria-expanded="false">{{data?.navbarSubName}}</a>
+                            <a class="dropdown-item d-lg-none " *ngIf="data.navbarName === 'Team'" [routerLink]="'home'" [fragment]="data.routerLink" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" >{{data?.navbarSubName}}</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle"  id="demoMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="cursor: pointer;">Offerings</a>
+                    <ul class="dropdown-menu"  aria-labelledby="demoMenu">
+                        <!-- Dropdown submenu -->
+                        <li class="dropdown-submenu dropend" *ngFor="let data of allnavItemList">
+                            <!-- <a class="dropdown-item d-none d-lg-block " *ngIf="data.navbarName === 'Offerings'" [routerLink]="'home'" [fragment]="data.routerLink" data-bs-toggle="dropdown" aria-expanded="false">{{data?.navbarSubName}}</a>
+                            <a class="dropdown-item d-lg-none " *ngIf="data.navbarName === 'Offerings'" [routerLink]="'home'" [fragment]="data.routerLink" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" >{{data?.navbarSubName}}</a> -->
+                            <a class="dropdown-item d-none d-lg-block " *ngIf="data.navbarName === 'Offerings'" [routerLink]="'offering'" [fragment]="data.routerLink" >{{data?.navbarSubName}}</a>
+                            <a class="dropdown-item d-lg-none " *ngIf="data.navbarName === 'Offerings'" [routerLink]="'offering'" [fragment]="data.routerLink" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" >{{data?.navbarSubName}}</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item d-none d-lg-block" *ngIf="partnerData.length > 0">
+                    <a class="nav-link"  [routerLink]="'home'" fragment="partners">Partners</a>
+                </li>
+                <li class="nav-item  d-lg-none" *ngIf="partnerData.length > 0">
+                    <a class="nav-link" [routerLink]="'home'" fragment="partners" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false">Partners</a>
+                </li>
+                <li class="nav-item d-none d-lg-block">
+                    <a class="nav-link" [routerLink]="'home'" fragment="blog-news">Blog & News</a>
+                </li>
+                <li class="nav-item  d-lg-none">
+                    <a class="nav-link" [routerLink]="'home'" fragment="blog-news" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false">Blog & News</a>
+                </li>
+                <li class="nav-item d-none d-lg-block">
+                    <a class="nav-link" [routerLink]="'home'" fragment="join-us">Join Us</a>
+                </li>
+                <li class="nav-item d-lg-none">
+                    <a class="nav-link" [routerLink]="'home'" fragment="join-us" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false">Join Us</a>
+                </li>
+                <li class="nav-item d-none d-lg-block">
+                    <a class="nav-link" [routerLink]="'home'" fragment="contact">Contact</a>
+                </li>
+                <li class="nav-item d-lg-none">
+                    <a class="nav-link" [routerLink]="'home'" fragment="contact" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false">Contact</a>
+                </li>
+            </ul>
+            <!-- Nav Main menu END -->
+
+            <!-- Nav Search START -->
+            <div class="nav my-3 my-xl-0 px-4 flex-nowrap align-items-center">
+                <div class="nav-item w-100">
+                    <!-- Social Media button -->
+                    <a href="https://www.linkedin.com/company/onnes-cryogenics/"  target="_blank" style="color: black;"><i class="fa-brands fa-linkedin-in fs-6"></i></a>
+                    <a href="https://www.instagram.com/onnes.cryogenics/"  target="_blank" style="color: black;"><i class="fa-brands fa-instagram fs-6"></i></a>
+                    <a href="https://www.facebook.com/onnescryogenics"  target="_blank" style="color: black;"><i class="fa-brands fa-facebook-f fs-6"></i></a>
+                    <a href="https://twitter.com/i/flow/login?redirect_after_login=%2FOCryogenics"  target="_blank" style="color: black;"><i class="fa-brands fa-twitter fs-6"></i></a>
+                </div>
+            </div>
+            <!-- Nav Search END -->
+        </div>
+        <!-- Main navbar END -->
+    </nav>
+</header>
+<!-- Header-end -->

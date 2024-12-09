@@ -1,0 +1,12 @@
+<div class="about-section">
+    <div class="row container mx-auto  px-lg-5" style="padding: 70px 0;" *ngFor="let about of allAboutUsList">
+        <div class="col-lg-3 ">
+            <h1 class="fw-bold">ABOUT US</h1>
+            <hr>
+            <img [src]="about.image" alt="">
+        </div>
+        <div class="col-lg-9">
+            <p class="mt-4 fs-5 mx-lg-5">{{about.content}}</p>
+        </div>
+    </div>
+</div>

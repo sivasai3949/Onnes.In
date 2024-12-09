@@ -1,0 +1,16 @@
+h1{
+    color: #1B75BC;
+}
+hr{
+    height: 3px;
+    color: #1B75BC;
+    width: 250px;
+}
+p{
+    text-align: justify;
+    font-size: 19px;
+    line-height: 2rem;
+}
+/* a:link{
+    text-decoration: none;
+} */

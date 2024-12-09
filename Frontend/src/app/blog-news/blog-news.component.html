@@ -1,0 +1,18 @@
+<div class="blog-news">
+    <div class="container mx-auto py-5 ">
+        <h1 class="fw-bold">BLOG & NEWS</h1>
+        <hr>
+        <div class="row mx-lg-5 py-lg-5 ps-lg-5 ps-3">
+            <div class="col-lg-4 col-sm-6 mb-3" *ngFor="let blog of allBlogNewsData">
+                <a class="text-decoration-none" [href]="blog.link" target="_blank">
+                    <div class="card border-0" style="width: 20rem;">
+                        <img [src]="blog.image" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center fw-bold">{{blog.content}}</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

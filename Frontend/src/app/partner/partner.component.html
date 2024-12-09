@@ -1,0 +1,79 @@
+<div class="partners" *ngIf="partnerData.length > 0">
+  <div class="container mx-auto py-5 ">
+    <h1 class="fw-bold">Partners</h1>
+    <hr>
+    <div class="container">
+      <div class="d-none d-lg-block">
+        <div class="row align-items-center">
+          <!-- <div class="col-sm-4">
+                        <h2 class="fw-bold">Space-Tech Program :</h2>
+                    </div> -->
+          <!-- <div class="col-lg-4 py-3" *ngFor="let item of partnerData">
+                        <a [href]="item.link" target="_blank">
+                            <img [src]="item.image" alt="" class="d-block fixed-size">
+                            <h5 class="fw-bold  mt-3 ms-5">{{item.title}}</h5>
+                        </a>
+                    </div> -->
+
+          <swiper-container class=" swiper-container d-none d-lg-block" loop="true" slides-per-view="3" space-between="15" autoplay-delay="2500">
+            <swiper-slide *ngFor="let item of partnerData">
+              <a [href]="item.link" target="_blank">
+                <img [src]="item.image" alt="" class="d-block fixed-size">
+                <h5 class="fw-bold  mt-3 ms-5">{{item.title}}</h5>
+            </a>
+            </swiper-slide>
+          </swiper-container>
+
+          <!-- <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item" *ngFor="let chunk of partnerData; let i = index" [class.active]="i === 0">
+                            <div class="row">
+                              <div class="col-4" *ngFor="let item of partnerData">
+                                <a [href]="item.link" target="_blank">
+                                  <img [src]="item.image" alt="" class="d-block fixed-size">
+                                  <h5 class="fw-bold mt-3 ms-5">{{item.title}}</h5>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev d-none d-lg-block" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                          <span class="rounded-circle p-2" aria-hidden="true" style="background-color: #313D9C; margin-right: 180px;">
+                            <span class="text-center"><i class="fas fa-chevron-left"></i></span>
+                          </span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next d-none d-lg-block" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                          <span class="rounded-circle p-2" aria-hidden="true" style="background-color: #313D9C; margin-left: 200px;">
+                            <span class="text-center"><i class="fas fa-chevron-right"></i></span>
+                          </span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div> -->
+
+
+        </div>
+      </div>
+      <div class="d-lg-none">
+        <!-- <div class="row align-items-center">
+          <div class="col-12 my-3" *ngFor="let item of partnerData">
+            <a [href]="item.link" target="_blank">
+              <img [src]="item.image" alt="" width="100%">
+              <h2 class="col-12 h2 w-100 mt-3 fw-bold text-center">{{item.title}}</h2>
+            </a>
+          </div>
+
+        </div> -->
+        <swiper-container class=" swiper-container" loop="true" navigation="true"
+            pagination="true" pagination-clickable="true" slides-per-view="1" space-between="15" autoplay-delay="2500">
+            <swiper-slide *ngFor="let item of partnerData">
+              <a [href]="item.link" target="_blank">
+                <img [src]="item.image" alt="" class="d-block fixed-size">
+                <h5 class="fw-bold  mt-3 ms-5">{{item.title}}</h5>
+            </a>
+            </swiper-slide>
+          </swiper-container>
+      </div>
+    </div>
+  </div>
+</div>

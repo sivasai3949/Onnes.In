@@ -1,0 +1,22 @@
+.investors{
+    background-color: rgba(0, 159, 227, 0.115);
+}
+h1{
+    color: #1B75BC;
+}
+hr{
+    height: 3px;
+    color: #1B75BC;
+    width: 100px;
+}
+.fixed-size {
+    width: 100%; 
+    height: 185px; 
+    /* object-fit: cover;  */
+  }
+a {
+    text-decoration: none;
+}
+h2{
+    color: #1B75BC;   
+}

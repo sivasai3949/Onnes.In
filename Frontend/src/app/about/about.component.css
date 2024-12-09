@@ -1,0 +1,18 @@
+.about-section{
+    /* background-color: #0000ff33; */
+    background-color: rgba(0, 159, 227, 0.115);
+}
+img{
+    border-radius: 20px;
+}
+h1{
+    color: #1B75BC;
+}
+hr{
+    height: 3px;
+    color: #1B75BC;
+    width: 150px;
+}
+p{
+    text-align: justify;
+}

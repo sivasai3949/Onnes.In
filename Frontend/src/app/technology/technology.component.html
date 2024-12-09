@@ -1,0 +1,15 @@
+<div class="technology">
+    <div class="container mx-auto py-5">
+        <h1 class="fw-bold">OFFERING</h1>
+        <hr>
+        <div class="row px-lg-5" *ngFor="let tech of allTechnologyList">
+            <div class="col-lg-3 mt-lg-5 pt-lg-5" *ngIf="tech.title === 'TECHNOLOGY'">
+                <h1 class="py-4" >{{tech.title}}</h1>
+                <i class="fa-solid fa-rocket fa-5x px-5"></i>
+            </div>
+            <div class="col-lg-9">
+                <p class="fs-5 mx-lg-5" *ngIf="tech.title === 'TECHNOLOGY'">{{tech.content}}</p>
+            </div>
+        </div>
+    </div>
+</div>

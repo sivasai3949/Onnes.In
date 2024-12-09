@@ -1,0 +1,17 @@
+.contact{
+    background-color: rgba(0, 159, 227, 0.115);
+}
+.fa-brands{
+    padding: 0 10px;
+}
+h1{
+    color: #1B75BC;
+}
+hr{
+    width: 150px;
+    height: 3px;
+    color: #1B75BC;
+}
+.social i{
+    color: #1B75BC;
+}

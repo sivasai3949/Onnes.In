@@ -1,0 +1,14 @@
+<div class="cryocoolers">
+    <div class="container mx-auto py-5">
+        <div class="row px-lg-5" *ngFor="let data of allCrocoolersList">
+            <div class="col-lg-3 mt-lg--5 pt-lg-5" *ngIf="data.title === 'CRYOCOOLERS'">
+                <h1 class="py-4">{{data.title}}</h1>
+                <i class="fa-solid fa-cloud fa-5x px-5"></i>
+            </div>
+            <div class="col-lg-9" *ngIf="data.title === 'CRYOCOOLERS'">
+                <p class="fs-5 mx-lg-5">{{data.content}}</p>
+            </div>
+            <p *ngIf="data.title === 'CRYOCOOLERS'" class="text-end fw-bold">Design concept: Sujith Vijayan</p>
+        </div>
+    </div>
+</div>

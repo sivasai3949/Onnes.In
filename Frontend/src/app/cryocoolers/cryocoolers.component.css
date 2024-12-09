@@ -1,0 +1,16 @@
+.cryocoolers{
+    background-color: rgba(0, 159, 227, 0.115);
+}
+hr{
+    height: 3px;
+    color: #1B75BC;
+    width: 150px;
+}
+p{
+    text-align: justify;
+    font-size: 19px;
+    line-height: 2rem;
+}
+h1,i{
+    color: #1B75BC;
+}

@@ -1,0 +1,9 @@
+<div class="d-flex justify-content-center align-items-center vh-100" *ngIf="loader">
+    <div  class="spinner "></div>
+</div>
+
+<div *ngIf="!loader">
+    <app-header></app-header>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+</div>

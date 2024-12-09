@@ -1,0 +1,16 @@
+.nav-item i{
+    padding: 10px;
+}
+.navbar-nav li{
+    padding: 0 7px;
+}
+.navbar-nav .nav-item a {
+    cursor: pointer;
+}
+@media(max-width:768px){
+    .navbar-brand img{
+        width: 100px;
+        height: 33px;
+        margin-left: 10px;
+    }
+}

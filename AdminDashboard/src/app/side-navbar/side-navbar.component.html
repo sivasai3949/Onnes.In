@@ -1,0 +1,229 @@
+<mat-sidenav-container class="vh-100">
+    <!-- side nav tabs -->
+    <mat-sidenav #sidebar mode="side" opened="opened" class="border border-0">
+        <div class="bg-white d-flex align-items-center justify-content-center p-2">
+            <img src="assets/images/logo.png" width="45%" class="my-1" alt="">
+        </div>
+        <!-- Tabs START -->
+        <ul class="nav nav-pills nav-pills-bg-soft pt-4 flex-column p-2" id="course-pills-tab" role="tablist">
+            <li class="nav-item mb-3"><a href="javascript: void(0)" (click)="appService.openSection('dashboard');"
+                    class="nav-link text-white d-flex align-items-center active" id="course-pills-tab-1"
+                    data-bs-toggle="pill" data-bs-target="#course-pills-tabs-1" type="button" role="tab"
+                    aria-controls="course-pills-tabs-1" aria-selected="true">
+                    <mat-icon class="fs-2">dashboard</mat-icon><span class="ps-4 mt-2">Dashboard</span></a></li>
+
+            <li class="nav-item mb-3"><a href="javascript: void(0)" (click)="appService.openSection('contactusForm');"
+                    class="nav-link text-white d-flex align-items-center" id="course-pills-tab-1" data-bs-toggle="pill"
+                    data-bs-target="#course-pills-tabs-1" type="button" role="tab" aria-controls="course-pills-tabs-1"
+                    aria-selected="true">
+                    <mat-icon class="fs-2"> import_contacts </mat-icon><span class="ps-4 mt-2">Contact Us</span></a>
+            </li>
+
+            <li class="nav-item mb-3"><a href="javascript: void(0)" (click)="appService.openSection('visitor');"
+                    class="nav-link text-white d-flex align-items-center" id="course-pills-tab-1" data-bs-toggle="pill"
+                    data-bs-target="#course-pills-tabs-1" type="button" role="tab" aria-controls="course-pills-tabs-1"
+                    aria-selected="true">
+                    <mat-icon class="fs-2"> import_contacts </mat-icon><span class="ps-4 mt-2">Visitors</span></a>
+            </li>
+
+            <li class="nav-item mb-3"><a href="javascript: void(0)" (click)="appService.openSection('navItem');"
+                    class="nav-link text-white d-flex align-items-center" id="course-pills-tab-1" data-bs-toggle="pill"
+                    data-bs-target="#course-pills-tabs-1" type="button" role="tab" aria-controls="course-pills-tabs-1"
+                    aria-selected="false">
+                    <mat-icon class="fs-2"> library_add</mat-icon><span class="ps-4 pb-1">Navbar</span></a></li>
+            <li class="nav-item mb-3"><a href="javascript: void(0)" (click)="appService.openSection('homeImage');"
+                    class="nav-link text-white d-flex align-items-center" id="course-pills-tab-1" data-bs-toggle="pill"
+                    data-bs-target="#course-pills-tabs-1" type="button" role="tab" aria-controls="course-pills-tabs-1"
+                    aria-selected="false">
+                    <mat-icon class="fs-2"> library_add</mat-icon><span class="ps-4 pb-1">Home Image</span></a></li>
+            <li class="nav-item mb-3"><a href="javascript: void(0)" (click)="appService.openSection('aboutUs');"
+                    class="nav-link text-white d-flex align-items-center" id="course-pills-tab-1" data-bs-toggle="pill"
+                    data-bs-target="#course-pills-tabs-1" type="button" role="tab" aria-controls="course-pills-tabs-1"
+                    aria-selected="false">
+                    <mat-icon class="fs-2"> description </mat-icon><span class="ps-4 pb-1">About Us</span></a></li>
+
+            <li class="nav-item mb-3">
+                <a class="nav-link text-white d-flex justify-content-between" data-bs-toggle="collapse"
+                    href="#collapsepage3" role="button" aria-expanded="false" aria-controls="1">
+                    <div class="d-flex"><mat-icon class="fs-2">group_work</mat-icon> <span class="ps-4">Teams</span>
+                    </div>
+                    <div><mat-icon>keyboard_arrow_down</mat-icon></div>
+                </a>
+                <ul class="nav collapse flex-column mt-2  ms-3" id="collapsepage3" data-bs-parent="#navbar-sidebar"
+                    style="background-color: #7e94a5;">
+                    <li class="nav-item mb-3"><a href="javascript: void(0)" (click)="appService.openSection('team');"
+                            class="nav-link text-white d-flex align-items-center" id="course-pills-tab-1"
+                            data-bs-toggle="pill" data-bs-target="#course-pills-tabs-1" type="button" role="tab"
+                            aria-controls="course-pills-tabs-1" aria-selected="false">
+                            <mat-icon class="fs-2"> group_work </mat-icon><span class="ps-4 pb-1">Founder</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="javascript: void(0)" (click)="appService.openSection('advisory');"
+                            class="nav-link text-white d-flex align-items-center" id="course-pills-tab-1"
+                            data-bs-toggle="pill" data-bs-target="#course-pills-tabs-1" type="button" role="tab"
+                            aria-controls="course-pills-tabs-1" aria-selected="false">
+                            <mat-icon class="fs-5"> picture_in_picture</mat-icon><span class="ps-4 pb-1">Advisory
+                            </span></a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <!-- <li class="nav-item mb-3"><a href="javascript: void(0)" (click)="appService.openSection('partner');"
+                class="nav-link text-white d-flex align-items-center" id="course-pills-tab-1" data-bs-toggle="pill"
+                data-bs-target="#course-pills-tabs-1" type="button" role="tab" aria-controls="course-pills-tabs-1"
+                aria-selected="false">
+                <mat-icon class="fs-2"> picture_in_picture</mat-icon><span class="ps-4 pb-1">Partner </span></a></li> -->
+
+            <li class="nav-item mb-3">
+                <a class="nav-link text-white d-flex justify-content-between" data-bs-toggle="collapse"
+                    href="#collapsepage4" role="button" aria-expanded="false" aria-controls="1">
+                    <div class="d-flex"><mat-icon class="fs-2">Partner</mat-icon> <span class="ps-4">Partner</span>
+                    </div>
+                    <div><mat-icon>keyboard_arrow_down</mat-icon></div>
+                </a>
+                <ul class="nav collapse flex-column mt-2  ms-3" id="collapsepage4" data-bs-parent="#navbar-sidebar"
+                    style="background-color: #7e94a5;">
+                    <li class="nav-item mb-3"><a href="javascript: void(0)" (click)="appService.openSection('partner');"
+                            class="nav-link text-white d-flex align-items-center" id="course-pills-tab-1"
+                            data-bs-toggle="pill" data-bs-target="#course-pills-tabs-1" type="button" role="tab"
+                            aria-controls="course-pills-tabs-1" aria-selected="false">
+                            <mat-icon class="fs-2"> picture_in_picture</mat-icon><span class="ps-4 pb-1">Partner
+                            </span></a></li>
+                    <li class="nav-item mb-3"><a href="javascript: void(0)"
+                            (click)="appService.openSection('investor');"
+                            class="nav-link text-white d-flex align-items-center" id="course-pills-tab-1"
+                            data-bs-toggle="pill" data-bs-target="#course-pills-tabs-1" type="button" role="tab"
+                            aria-controls="course-pills-tabs-1" aria-selected="false">
+                            <mat-icon class="fs-2"> picture_in_picture</mat-icon><span class="ps-4 pb-1">Investors
+                            </span></a></li>
+
+                </ul>
+            </li>
+            <!-- Tab item -->
+            <li class="nav-item mb-3">
+                <a class="nav-link text-white d-flex justify-content-between" data-bs-toggle="collapse"
+                    href="#collapsepage2" role="button" aria-expanded="false" aria-controls="1">
+                    <div class="d-flex"><mat-icon class="fs-2">picture_in_picture</mat-icon> <span
+                            class="ps-4">Offering</span></div>
+                    <div><mat-icon>keyboard_arrow_down</mat-icon></div>
+                </a>
+                <!-- Submenu -->
+                <ul class="nav collapse flex-column mt-2  ms-3" id="collapsepage2" data-bs-parent="#navbar-sidebar"
+                    style="background-color: #7e94a5;">
+                    <li class="nav-item ">
+                        <a href="javascript: void(0)" (click)="appService.openSection('cfrp');"
+                            class="nav-link text-white d-flex align-items-center" id="course-pills-tab-1"
+                            data-bs-toggle="pill" data-bs-target="#course-pills-tabs-1" type="button" role="tab"
+                            aria-controls="course-pills-tabs-1" aria-selected="false">
+                            <mat-icon class="fs-5"> picture_in_picture</mat-icon><span class="ps-4 pb-1">Offering
+                                Content
+                            </span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="javascript: void(0)" (click)="appService.openSection('offering');"
+                            class="nav-link text-white d-flex align-items-center" id="course-pills-tab-1"
+                            data-bs-toggle="pill" data-bs-target="#course-pills-tabs-1" type="button" role="tab"
+                            aria-controls="course-pills-tabs-1" aria-selected="false">
+                            <mat-icon class="fs-5"> picture_in_picture</mat-icon><span class="ps-4 pb-1">Offering Image
+                            </span></a>
+                    </li>
+
+                </ul>
+            </li>
+            <li class="nav-item mb-3"><a href="javascript: void(0)" (click)="appService.openSection('blogNews');"
+                    class="nav-link text-white d-flex align-items-center" id="course-pills-tab-1" data-bs-toggle="pill"
+                    data-bs-target="#course-pills-tabs-1" type="button" role="tab" aria-controls="course-pills-tabs-1"
+                    aria-selected="false">
+                    <mat-icon class="fs-2"> assignment</mat-icon><span class="ps-4 pb-1">Blog & News </span></a></li>
+            <li class="nav-item mb-3"><a href="javascript: void(0)" (click)="appService.openSection('joinus');"
+                    class="nav-link text-white d-flex align-items-center" id="course-pills-tab-1" data-bs-toggle="pill"
+                    data-bs-target="#course-pills-tabs-1" type="button" role="tab" aria-controls="course-pills-tabs-1"
+                    aria-selected="false">
+                    <mat-icon class="fs-2"> input</mat-icon><span class="ps-4 pb-1">Join Us </span></a></li>
+            <li class="nav-item mb-3"><a href="javascript: void(0)" (click)="appService.openSection('letsTalk');"
+                    class="nav-link text-white d-flex align-items-center" id="course-pills-tab-1" data-bs-toggle="pill"
+                    data-bs-target="#course-pills-tabs-1" type="button" role="tab" aria-controls="course-pills-tabs-1"
+                    aria-selected="false">
+                    <mat-icon class="fs-2"> input</mat-icon><span class="ps-4 pb-1">Lets Talk </span></a></li>
+
+        </ul>
+        <!-- Tabs END -->
+    </mat-sidenav>
+    <mat-sidenav-content class="sticky-top">
+        <!-- nav header -->
+        <div class="content">
+            <div class="bg-white p-2 shadow-sm p-3 mb-3 bg-body">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
+                        <mat-icon (click)="sidebar.toggle()">menu</mat-icon>
+                        <span class="ps-3 pt-1 fs-3">{{this.currentUserData?.admintype}}</span>
+                    </div>
+                    <span class="fw-bold">
+                        <a href="javascript: void(0)" (click)="signout();" type="button" role="tab"
+                            aria-selected="false" class="text-decoration-none d-flex align-items-center text-dark">
+                            <mat-icon class=" px-1 ">power_settings_new</mat-icon>
+                            <span>Sign Out</span>
+                            <!-- <span *ngIf="this.currentUserData?.admintype">Sign Out</span>
+                            <span *ngIf="!this.currentUserData?.admintype">Sign In</span> -->
+                        </a>
+                    </span>
+                </div>
+            </div>
+            <div style="height: 83vh">
+                <!-- <div *ngIf="appService.dashboard" class="mx-2 p-3 card bg-white rounded-0">
+                    <ng-container *ngTemplateOutlet="adminDetails"></ng-container>
+                </div> -->
+                <div *ngIf="appService.contactusForm">
+                    <app-contactus-form></app-contactus-form>
+                </div>
+                <div *ngIf="appService.visitor">
+                    <app-visitors></app-visitors>
+                </div>
+                <div *ngIf="appService.dashboard">
+                    <app-dashboard></app-dashboard>
+                </div>
+                <div *ngIf="appService.navItem">
+                    <app-nav-item></app-nav-item>
+                </div>
+                <div *ngIf="appService.homeImage">
+                    <app-home-image></app-home-image>
+                </div>
+                <div *ngIf="appService.aboutUs">
+                    <app-aboutus></app-aboutus>
+                </div>
+                <div *ngIf="appService.team">
+                    <app-team></app-team>
+                </div>
+                <div *ngIf="appService.advisory">
+                    <app-advisory></app-advisory>
+                </div>
+                <div *ngIf="appService.partner">
+                    <app-partner></app-partner>
+                </div>
+                <div *ngIf="appService.investor">
+                    <app-investors></app-investors>
+                </div>
+                <div *ngIf="appService.offering">
+                    <app-offering></app-offering>
+                </div>
+                <div *ngIf="appService.cfrp">
+                    <app-cfrp-vessels></app-cfrp-vessels>
+                </div>
+                <div *ngIf="appService.blogNews">
+                    <app-blog-news></app-blog-news>
+                </div>
+                <div *ngIf="appService.joinus">
+                    <app-join-us></app-join-us>
+                </div>
+                <div *ngIf="appService.letsTalk">
+                    <app-lets-talk></app-lets-talk>
+                </div>
+            </div>
+            <!-- nav content -->
+            <div class="main">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

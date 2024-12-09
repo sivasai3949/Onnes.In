@@ -1,0 +1,47 @@
+<div class="founder">
+    <div class="container mx-auto py-5">
+        <h1 class="fw-bold">TEAM - FOUNDERS</h1>
+        <hr>
+        <div class="row mx-lg-5 py-lg-5">
+            <div class="col-lg-6" *ngFor="let team of allTeamList">
+                <div class=" mb-3">
+                    <img class="avatar-img rounded-circle border border-1" [src]="team.image" alt="avatar" style="width: 200px; height: 200px;">
+                </div>
+                <h1>{{team.name}}</h1>
+                <h5>{{team.designation}}</h5>
+                <div class="description-container">
+                    <p class="py-4">
+                        <ng-container *ngIf="!team.showFullDescription; else fullDescription">
+                            {{ team.about | slice:0:200 }}
+                        </ng-container>
+                        <ng-template #fullDescription>
+                            {{ team.about }}
+                        </ng-template>
+                        <span *ngIf="team.about.length > 100">
+                            <span (click)="toggleDescription(team)" style="cursor: pointer; color: blue;">
+                                {{ team.showFullDescription ? 'View Less' : '....View More' }}
+                            </span>
+                        </span>
+                    </p>
+                </div>
+                <div class="d-flex">
+                    <a [href]="team.link1" target="_blank" style="color: rgb(148, 142, 142);"><i class="fa-brands fa-linkedin fa-3x"></i></a>
+                    <div *ngIf="team.name == 'Dr. Ram K Aluru'">
+                        <a [href]="team.link2" target="_blank"><img src="assets/images/link-2 - Ram.png" alt="img" ></a>
+                        <a [href]="team.link3" target="_blank"><img src="assets/images/link-3 - Ram.png" alt="img" ></a>
+                        <a [href]="team.link4" target="_blank"><img src="assets/images/link-4-Ram.png" alt="img" ></a>
+                    </div>
+                    <div *ngIf="team.name == 'Dr. Vikram S Raghavan'">
+                        <a [href]="team.link2" target="_blank"><img src="assets/images/link-2 - Vikram.png" alt="img" style="width: 70px; height: 60px; margin-top: -17px; " ></a>
+                        <a [href]="team.link3" target="_blank"><img src="assets/images/link-3-vikram.png" alt="img" style="width: 65px; height: 75px; margin-top: -10px; margin-left:-15px" ></a>
+                        <a [href]="team.link4" target="_blank"><img src="assets/images/link-4-Vikram.png" alt="img" style="width: 53px; height: 55px; margin-top:-14px; margin-left:-10px"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+   
+        
+        
+    </div>
+</div>

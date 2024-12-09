@@ -1,0 +1,30 @@
+<!-- <div>
+    <section id="technology">
+        <app-technology></app-technology>
+    </section>
+    <section id="cryocoolers">
+        <app-cryocoolers></app-cryocoolers>
+    </section>
+</div> -->
+
+<div class="blog-news">
+    <div class="container mx-auto py-5 ">
+       <div *ngFor="let content of selectAllContent">
+        <h1 class="fw-bold text-uppercase">{{content.name}}</h1>
+        <hr>
+        <div >
+            <p>{{content.content}}</p>
+        </div>
+       </div>
+        <div class="row mx-lg-5 py-lg-5 ps-lg-5 ps-3">
+            <div class="col-lg-4 col-sm-6" *ngFor="let data of selectContentList">
+                <div class="card border-0" style="width: 20rem;">
+                    <img [src]="data.image" class="card-img-top" alt="..." style="height: 13.5rem;">
+                    <div class="card-body">
+                        <h5 class="card-title text-center fw-bold">{{data.content}}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

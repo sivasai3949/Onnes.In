@@ -1,0 +1,46 @@
+<div class="investors" *ngIf="investorData.length > 0">
+    <div class="container mx-auto py-5 ">
+        <h1 class="fw-bold">Investors</h1>
+        <hr>
+        <div class="container">
+            <div class="d-none d-lg-block">
+                <div class="row align-items-center">
+                    <!-- <div class="col-lg-4 py-3" *ngFor="let item of investorData">
+                        <a [href]="item.link" target="_blank">
+                            <img [src]="item.image" alt="" class="d-block fixed-size">
+                            <h5 class="fw-bold  mt-3 ms-5">{{item.title}}</h5>
+                        </a>
+                    </div> -->
+                    <swiper-container class=" swiper-container d-none d-lg-block" loop="true" slides-per-view="3"
+                        space-between="15" autoplay-delay="2500">
+                        <swiper-slide *ngFor="let item of investorData">
+                            <a [href]="item.link" target="_blank">
+                                <img [src]="item.image" alt="" class="d-block fixed-size">
+                                <h5 class="fw-bold  mt-3 ms-5">{{item.title}}</h5>
+                            </a>
+                        </swiper-slide>
+                    </swiper-container>
+                </div>
+            </div>
+            <div class="d-lg-none">
+                <div class="row align-items-center">
+                    <!-- <div class="col-12 my-3" *ngFor="let item of investorData">
+                        <a [href]="item.link" target="_blank">
+                            <img [src]="item.image" alt="" width="100%">
+                            <h2 class="col-12 h2 w-100 mt-3 fw-bold text-center">{{item.title}}</h2>
+                        </a>
+                    </div> -->
+                    <swiper-container class=" swiper-container" loop="true" navigation="true" pagination="true"
+                        pagination-clickable="true" slides-per-view="1" space-between="15" autoplay-delay="2500">
+                        <swiper-slide *ngFor="let item of investorData">
+                            <a [href]="item.link" target="_blank">
+                                <img [src]="item.image" alt="" class="d-block fixed-size">
+                                <h5 class="fw-bold  mt-3 ms-5">{{item.title}}</h5>
+                            </a>
+                        </swiper-slide>
+                    </swiper-container>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
