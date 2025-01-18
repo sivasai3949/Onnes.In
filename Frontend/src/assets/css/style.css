@@ -1171,6 +1171,7 @@ address {
     height: 66px;
     display: block;
     width: auto;
+    object-fit: contain;
   }
   .navbar-expand-xl .navbar-nav .dropdown > .dropdown-menu {
     top: 120%;
