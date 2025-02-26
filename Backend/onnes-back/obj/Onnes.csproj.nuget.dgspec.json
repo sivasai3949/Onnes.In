@@ -1,32 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "F:\\onnes-back\\onnes-back\\onnes-back\\Onnes.csproj": {}
+    "C:\\Users\\HP\\Onnes.In\\Backend\\onnes-back\\Onnes.csproj": {}
   },
   "projects": {
-    "F:\\onnes-back\\onnes-back\\onnes-back\\Onnes.csproj": {
+    "C:\\Users\\HP\\Onnes.In\\Backend\\onnes-back\\Onnes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\onnes-back\\onnes-back\\onnes-back\\Onnes.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Onnes.In\\Backend\\onnes-back\\Onnes.csproj",
         "projectName": "Onnes",
-        "projectPath": "F:\\onnes-back\\onnes-back\\onnes-back\\Onnes.csproj",
+        "projectPath": "C:\\Users\\HP\\Onnes.In\\Backend\\onnes-back\\Onnes.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "F:\\onnes-back\\onnes-back\\onnes-back\\obj\\",
+        "outputPath": "C:\\Users\\HP\\Onnes.In\\Backend\\onnes-back\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -42,8 +40,8 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -81,24 +79,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.29, 6.0.29]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[6.0.29, 6.0.29]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.29, 6.0.29]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.29, 6.0.29]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -107,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.406/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
