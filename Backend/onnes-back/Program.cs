@@ -55,7 +55,7 @@ app.UseAuthorization();
 // Map controllers to endpoints
 app.MapControllers();
 
-// Scope service usage for proper disposal of DbContext or other DI services
+// Scope service usage for proper disposal of DbContext or other DI 
 using (var scope = app.Services.CreateScope())
 {
     var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
