@@ -3,7 +3,7 @@ name: Deploy to Server
 on:
   push:
     branches:
-      - master  # Adjusted to 'master' as per your current branch name
+      - 26-02-25  # Adjusted to 'master' as per your current branch name
 
 jobs:
   deploy:
@@ -22,5 +22,5 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no ubuntu@www.onnescryogenics.com.au  << 'EOF' 
             cd /home/ubuntu/Onnes.In
-            ./deploy.sh master  # Using 'master' as the branch name
+            ./deploy.sh 26-02-25  # Using 'master' as the branch name
           EOF
