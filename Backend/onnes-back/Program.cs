@@ -63,4 +63,4 @@ using (var scope = app.Services.CreateScope())
 }
 
 // Run the application and bind it to all network interfaces on specified HTTP port
-app.Run("http://0.0.0.0:5179"); // Use HTTP only
+app.Run("http://0.0.0.0:5179"); //hii
