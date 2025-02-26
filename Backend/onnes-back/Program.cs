@@ -1,35 +1,36 @@
-
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 using Onnes.Model;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddDbContext<AppDbContext>(Options =>
+// Add services to the container
+builder.Services.AddDbContext<AppDbContext>(options =>
 {
-    Options.UseSqlServer(builder.Configuration.GetConnectionString("Onnes"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Onnes"));
 });
- 
-builder.Services.AddCors(p => p.AddPolicy("corspolicy", build =>
+
+// Update CORS policy to allow specific origins
+builder.Services.AddCors(options => options.AddPolicy("corspolicy", policy =>
 {
-    build.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
-}));                                                                                                                                                                                                                    
+    policy.WithOrigins("https://onnescryogenics.com.au", "https://www.onnescryogenics.com.au")  // Allow both root and www subdomains
+          .AllowAnyMethod()
+          .AllowAnyHeader();
+}));
+
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-
 app.UseDeveloperExceptionPage();
 app.UseRouting();
 app.UseStaticFiles();
-    
-app.UseSwagger();
-app.UseSwaggerUI();
 
+app.UseCors("corspolicy");
+
+// Map static files for images
 app.UseStaticFiles(new StaticFileOptions()
 {
     FileProvider = new PhysicalFileProvider(
@@ -37,6 +38,7 @@ app.UseStaticFiles(new StaticFileOptions()
     RequestPath = new PathString("/images")
 });
 
+// Enable directory browsing for images
 app.UseDirectoryBrowser(new DirectoryBrowserOptions()
 {
     FileProvider = new PhysicalFileProvider(
@@ -44,11 +46,21 @@ app.UseDirectoryBrowser(new DirectoryBrowserOptions()
     RequestPath = new PathString("/images")
 });
 
-app.UseCors("corspolicy");
-app.UseHttpsRedirection();
+// Enable Swagger for API documentation and testing
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseAuthorization();
 
+// Map controllers to endpoints
 app.MapControllers();
 
-app.Run();
+// Scope service usage for proper disposal of DbContext or other DI services
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    // Perform initialization or operations as needed
+}
+
+// Run the application and bind it to all network interfaces on specified HTTP port
+app.Run("http://0.0.0.0:5179"); // Use HTTP only
